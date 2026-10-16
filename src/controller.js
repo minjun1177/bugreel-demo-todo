@@ -214,7 +214,7 @@
     Controller.prototype._updateCount = function () {
         var self = this;
         self.model.getCount(function (todos) {
-            self.view.render("updateElementCount", todos.total);
+            self.view.render("updateElementCount", todos.active);
             self.view.render("clearCompletedButton", {
                 completed: todos.completed,
                 visible: todos.completed > 0,
